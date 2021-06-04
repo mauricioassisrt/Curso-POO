@@ -16,7 +16,14 @@ class Caneta
             echo "Rabiscando";
         }
     }
-
+    function escrever()
+    {
+        echo 'escrevendo';
+    }
+    function pintar()
+    {
+        echo  'pintando';
+    }
     function tampar()
     {
         $this->tampa = true;
