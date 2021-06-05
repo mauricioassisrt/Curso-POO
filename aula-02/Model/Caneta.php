@@ -2,13 +2,13 @@
 
 class Caneta
 {
-    var $modelo;
-    var $cor;
-    var $ponta;
-    var $carga;
-    var $tampa;
+    public $modelo;
+    public $cor;
+    private $ponta;
+    protected $carga;
+    protected $tampa;
 
-    function rabiscar()
+    public  function rabiscar()
     {
         if ($this->tampa == true) {
             echo "Caneta está tampada!";
@@ -24,12 +24,12 @@ class Caneta
     {
         echo  'pintando';
     }
-    function tampar()
+    private function tampar()
     {
         $this->tampa = true;
     }
 
-    function destampar()
+   private function destampar()
     {
         $this->tampa = false;
     }
