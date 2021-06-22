@@ -10,26 +10,20 @@
 </head>
 
 <body>
-    <?php
-    $c1 = new Caneta;
-    // $c1->cor = "Vermelha";
-    // $c1->modelo = "BIC";
-    // $c1->ponta = 1.2;
-    // $c1->carga = 50;
-    // $c1->destampar();
-    // $c1->rabiscar();
+<?php
 
-    // $c2 = new Caneta;
-    // $c2->cor = "Azul";
-    // $c2->modelo = "PILOT";
-    // $c2->ponta = 0.2;
-    // $c2->carga = 5;
-    // $c2->tampar();
 
-    $c1->modelo = "BIC";
-    print_r($c1);
+$c2 = new Caneta("BIC", "AZUL", 0.5);
+//$c2->setCor("Azul");
+//$c2->setModelo("PILOT");
+//$c2->setPonta(0.2);
+//$c2->setCarga(5);
+//$c2->setTampa(0);
+//
 
-    ?>
+print_r($c2);
+
+?>
 </body>
 
 </html>
