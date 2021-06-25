@@ -14,12 +14,12 @@
 
 
 $c2 = new Caneta("BIC", "AZUL", 0.5);
-//$c2->setCor("Azul");
-//$c2->setModelo("PILOT");
-//$c2->setPonta(0.2);
-//$c2->setCarga(5);
-//$c2->setTampa(0);
-//
+//        $c2->setCor("Azul");
+//        $c2->setModelo("PILOT");
+//        $c2->setPonta(0.2);
+//        $c2->setCarga(5);
+//        $c2->setTampa(0);
+
 
 print_r($c2);
 
