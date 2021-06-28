@@ -1,9 +1,4 @@
 <?php
-
-/*
- *
- */
-
 class ContaBanco
 {
     public $numConta;
@@ -16,6 +11,7 @@ class ContaBanco
     {
         $this->setSaldo(0);
         $this->setStatus(false);
+        echo '<p> Conta criada com sucesso </p>';
     }
 
     /*
@@ -38,11 +34,12 @@ class ContaBanco
     public function fecharConta()
     {
         if ($this->getSaldo() > 0) {
-            echo "Conta possui dinheiro ";
+            echo "<p>Conta possui dinheiro, não é possivel fecha-lá </p>";
         } elseif ($this->getSaldo() < 0) {
-            echo "conta nao possui dinheiro ";
+            echo "<p>conta nao possui dinheiro</p> ";
         } else {
             $this->setStatus(false);
+            echo "<p>conta de " .$this->getDono(). " , fechada com sucesso !</p> ";
         }
     }
 
@@ -51,10 +48,11 @@ class ContaBanco
      */
     public function deposistar($valor)
     {
-        if ($this->getStatus() == true) {
+        if ($this->getStatus()) {
             $this->setSaldo($valor + $this->getSaldo());
+            echo "<p>Deposito de  " . $valor . "  na conta de " . $this->getDono() . "</p>";
         } else {
-            echo "Conta fechada nao é possivel depositar ";
+            echo "<p>Conta fechada nao é possivel depositar </p>";
         }
     }
 
@@ -63,14 +61,15 @@ class ContaBanco
      */
     public function sacar($valor)
     {
-        if ($this->getStatus() == true) {
-            if ($this->getSaldo() > $valor) {
+        if ($this->getStatus()) {
+            if ($this->getSaldo() >= $valor) {
                 $this->setSaldo($this->getSaldo() - $valor);
+                echo "<p>Saque de  " . $valor . " Autorizado na conta de " . $this->getDono() . "</p>";
             } else {
-                echo "Saldo insuficiente ";
+                echo "<p>Saldo insuficiente </p>";
             }
         } else {
-            echo " A conta não está aberta";
+            echo "<p> A conta não está aberta</p>";
         }
     }
 
@@ -86,13 +85,13 @@ class ContaBanco
         } else if ($this->getTipo() == "CP") {
             $v = 20;
         }
-        if ($this->getStatus() == true) {
+        if ($this->getStatus()) {
             if ($this->getSaldo() > $v) {
                 $this->setSaldo($this->getSaldo() - $v);
+                echo "<p>Mensalidade  de  " . $v . " Autorizado na conta de " . $this->getDono() . "</p>";
             } else {
-                echo "Saldo Insuficiente";
+                echo "<p>Não é possivel cobrar</p> ";
             }
-            echo "Impossivel pagar";
         }
     }
 
@@ -151,5 +150,4 @@ class ContaBanco
     {
         $this->status = $status;
     }
-
 }
