@@ -20,3 +20,22 @@ TELEFONE PRIVADO = MEU TELEFONE
 SÓ A CLASSE ATUAL TEM ACESSO
 TELEFONE RESTRITO = O FIXO DA MINHA CASA;
 SÓ HERANÇAS PODEM UTILIZAR, EXEMPLO MINHA MAE E OS FILHOS 
+
+### Curso POO Teoria #06a - Pilares da POO: Encapsulamento
+
+Encapsulamento 
+Definição: Ocultar partes independentes da implementação, permitindo construir partes invisiveis ao mundo exterior
+exemplo ao comprar uma pilha é importante saber oque tem dentro de uma pilha, os componentes.
+e não é necessário saber o funcionamento dela e sim só é preciso da voltagem.
+a troca de informações 
+A comunicação com o meio externo de uma classe se dá atráves de uma interface na qual possibilita o usuário a interação.
+
+Encapsular não é uma obrigatoriedade porém é uma boa prática para produzir classes com maior eficiencia 
+Vantagens do Encapsulamento
+1 Tornar mudanças invisiveis 
+2 Facilitar a reutilização de código 
+3 Reduzir efeitos colaterais 
+
+Em uma interface os metodos criados tem definição como metodos abstratos, ou seja não posso implementar os mesmos
+
+parei https://www.youtube.com/watch?v=1wYRGFXpVlg&list=PLHz_AreHm4dmGuLII3tsvryMMD7VgcT7x&index=12 22-58
