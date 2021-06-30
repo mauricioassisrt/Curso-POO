@@ -21,7 +21,7 @@ SÓ A CLASSE ATUAL TEM ACESSO
 TELEFONE RESTRITO = O FIXO DA MINHA CASA;
 SÓ HERANÇAS PODEM UTILIZAR, EXEMPLO MINHA MAE E OS FILHOS 
 
-### Curso POO Teoria #06a - Pilares da POO: Encapsulamento
+### Curso POO Teoria #06 - Pilares da POO: Encapsulamento
 
 Encapsulamento 
 Definição: Ocultar partes independentes da implementação, permitindo construir partes invisiveis ao mundo exterior
@@ -38,4 +38,5 @@ Vantagens do Encapsulamento
 
 Em uma interface os metodos criados tem definição como metodos abstratos, ou seja não posso implementar os mesmos
 
-parei https://www.youtube.com/watch?v=1wYRGFXpVlg&list=PLHz_AreHm4dmGuLII3tsvryMMD7VgcT7x&index=12 22-58
+no encapsulamento todos os atributos são todos privados por padrão 
+
