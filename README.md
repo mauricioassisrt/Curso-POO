@@ -31,12 +31,22 @@ a troca de informações
 A comunicação com o meio externo de uma classe se dá atráves de uma interface na qual possibilita o usuário a interação.
 
 Encapsular não é uma obrigatoriedade porém é uma boa prática para produzir classes com maior eficiencia 
-Vantagens do Encapsulamento
-1 Tornar mudanças invisiveis 
-2 Facilitar a reutilização de código 
-3 Reduzir efeitos colaterais 
+Vantagens do Encapsulamento <Br>
+1 Tornar mudanças invisiveis <Br>
+2 Facilitar a reutilização de código <Br>
+3 Reduzir efeitos colaterais<Br> 
 
 Em uma interface os metodos criados tem definição como metodos abstratos, ou seja não posso implementar os mesmos
 
 no encapsulamento todos os atributos são todos privados por padrão 
+
+Curso POO Teoria #07a - Relacionamento entre Classes
+
+UEC <br>
+Diagrama <br>
+Atributos: <Br>
+private nome, nascionalidade, idade, altura, peso, categoria, vitorias, derrotas, empates <br>
+metodos - visibulidade públicos <br>
+apresentar(), status(), ganharLuta(), perderLuta(), empatarLuta(), <br>
+Modificadores set e get <br>
 
