@@ -4,7 +4,7 @@
 class Lutador
 {
     private $nome;
-    private $ascionalidade;
+    private $nascionalidade;
     private $idade;
     private $altura;
     private $peso;
@@ -13,8 +13,44 @@ class Lutador
     private $derrotas;
     private $empates;
 
+    /**
+     * Lutador constructor.
+     * @param $nome
+     * @param $nascionalidade
+     * @param $idade
+     * @param $altura
+     * @param $peso
+     * @param $categoria
+     * @param $vitorias
+     * @param $derrotas
+     * @param $empates
+     */
+    public function __construct($nome, $nascionalidade, $idade, $altura, $peso, $categoria, $vitorias, $derrotas, $empates)
+    {
+        $this->nome = $nome;
+        $this->nascionalidade = $nascionalidade;
+        $this->idade = $idade;
+        $this->altura = $altura;
+        $this->setPeso($peso);
+        $this->categoria = $categoria;
+        $this->vitorias = $vitorias;
+        $this->derrotas = $derrotas;
+        $this->empates = $empates;
+    }
+
+
     public function apresentar()
     {
+        echo(
+            "LUTADOR " . $this->getNome()
+            . "<br> ORIGEM " . $this->getNascionalidade()
+            . "<br>IDADE " . $this->getIdade()
+            . "<br>ALTURA " . $this->getAltura()
+            . "<br>PESANDO " . $this->getPeso()
+            . "<br>GANHOU " . $this->getVitorias()
+            . "<br>PERDEU " . $this->getDerrotas()
+            . "<br>Empates " . $this->getEmpates()
+        );
 
     }
 
@@ -38,6 +74,7 @@ class Lutador
 
     }
 
+
     /**
      * @return mixed
      */
@@ -57,18 +94,19 @@ class Lutador
     /**
      * @return mixed
      */
-    public function getAscionalidade()
+    public function getNascionalidade()
     {
-        return $this->ascionalidade;
+        return $this->nascionalidade;
     }
 
     /**
-     * @param mixed $ascionalidade
+     * @param mixed $nascionalidade
      */
-    public function setAscionalidade($ascionalidade): void
+    public function setNascionalidade($nascionalidade): void
     {
-        $this->ascionalidade = $ascionalidade;
+        $this->nascionalidade = $nascionalidade;
     }
+
 
     /**
      * @return mixed
@@ -116,6 +154,7 @@ class Lutador
     public function setPeso($peso): void
     {
         $this->peso = $peso;
+        $this->setCategoria();
     }
 
     /**
@@ -126,12 +165,22 @@ class Lutador
         return $this->categoria;
     }
 
-    /**
-     * @param mixed $categoria
-     */
-    public function setCategoria($categoria): void
+
+    public function setCategoria()
     {
-        $this->categoria = $categoria;
+        if ($this->getPeso() < 52.2) {
+            $this->categoria = "Invalido";
+        } elseif ($this->getPeso() <= 70.3) {
+            $this->categoria = "Leve";
+        } elseif ($this->getPeso() <= 83.9) {
+            $this->categoria = "Médio";
+        } elseif ($this->getPeso() <= 120.2) {
+            $this->categoria = "Pesado";
+        } else {
+
+            $this->categoria = "Invalido";
+        }
+
     }
 
     /**
