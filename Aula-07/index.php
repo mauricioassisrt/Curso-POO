@@ -10,9 +10,17 @@
 </head>
 <body>
 <?php
-$lut = new Lutador('asdasdad', '$nascionalidade', '$idade', '$altura', '$peso', '$categoria', '$vitorias',
-    '$derrotas', '$empates');
-$lut->apresentar();
+$lut = new Lutador(
+    'asdasdad',
+    '$nascionalidade',
+    '$idade',
+    '$altura',
+    '$peso',
+    '$categoria',
+    '$vitorias',
+    '$derrotas', '$empates'
+);
+$lut->status();
 
 ?>
 </body>

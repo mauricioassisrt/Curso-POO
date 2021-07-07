@@ -25,14 +25,13 @@ class Lutador
      * @param $derrotas
      * @param $empates
      */
-    public function __construct($nome, $nascionalidade, $idade, $altura, $peso, $categoria, $vitorias, $derrotas, $empates)
+    public function __construct($nome, $nascionalidade, $idade, $altura, $peso, $vitorias, $derrotas, $empates)
     {
         $this->nome = $nome;
         $this->nascionalidade = $nascionalidade;
         $this->idade = $idade;
         $this->altura = $altura;
-        $this->setPeso($peso);
-        $this->categoria = $categoria;
+        //  $this->setPeso($peso);
         $this->vitorias = $vitorias;
         $this->derrotas = $derrotas;
         $this->empates = $empates;
@@ -42,7 +41,8 @@ class Lutador
     public function apresentar()
     {
         echo(
-            "LUTADOR " . $this->getNome()
+            "<p>__________________________</p>"
+            . "<br> LUTADOR " . $this->getNome()
             . "<br> ORIGEM " . $this->getNascionalidade()
             . "<br>IDADE " . $this->getIdade()
             . "<br>ALTURA " . $this->getAltura()
@@ -56,24 +56,40 @@ class Lutador
 
     public function status()
     {
-
+        echo("<p>__________________________</p>");
     }
 
     public function ganharLuta()
     {
-
+        $this->setVitorias($this->getVitorias() + 1);
     }
 
     public function perderLuta()
     {
-
+        $this->setDerrotas($this->getDerrotas() + 1);
     }
 
     public function empatarLuta()
     {
-
+        $this->setEmpates($this->getEmpates() + 1);
     }
 
+    public function setCategoria()
+    {
+        if ($this->getPeso() < 52.2) {
+            $this->categoria = "Invalido";
+        } elseif ($this->getPeso() <= 70.3) {
+            $this->categoria = "Leve";
+        } elseif ($this->getPeso() <= 83.9) {
+            $this->categoria = "Médio";
+        } elseif ($this->getPeso() <= 120.2) {
+            $this->categoria = "Pesado";
+        } else {
+
+            $this->categoria = "Invalido";
+        }
+
+    }
 
     /**
      * @return mixed
@@ -165,23 +181,6 @@ class Lutador
         return $this->categoria;
     }
 
-
-    public function setCategoria()
-    {
-        if ($this->getPeso() < 52.2) {
-            $this->categoria = "Invalido";
-        } elseif ($this->getPeso() <= 70.3) {
-            $this->categoria = "Leve";
-        } elseif ($this->getPeso() <= 83.9) {
-            $this->categoria = "Médio";
-        } elseif ($this->getPeso() <= 120.2) {
-            $this->categoria = "Pesado";
-        } else {
-
-            $this->categoria = "Invalido";
-        }
-
-    }
 
     /**
      * @return mixed
