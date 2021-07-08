@@ -9,19 +9,21 @@
     <title>LUTADOR</title>
 </head>
 <body>
-<?php
-$lut = new Lutador(
-    'asdasdad',
-    '$nascionalidade',
-    '$idade',
-    '$altura',
-    '$peso',
-    '$categoria',
-    '$vitorias',
-    '$derrotas', '$empates'
-);
-$lut->status();
+    <pre>
 
-?>
+    <?php
+    $lut = array();
+
+    $lut[0] = new Lutador("Pretty Boy", "França", 20, 1.46, 68.9, 2, 3, 5);
+    $lut[1] = new Lutador("Putscript", "brasil", 29, 1.66, 57.9, 12, 5, 3);
+    $lut[2] = new Lutador("Snapshadow", "USA", 32, 1.90, 75.9, 44, 3, 54);
+    $lut[3] = new Lutador("Dead Code", "Australia", 37, 1.70, 90.9, 22, 3, 15);
+    $lut[4] = new Lutador("Neardart", "Senegal", 23, 1.96, 102.9, 2, 3, 5);
+
+    foreach ($lut as $value) {
+        $value->apresentar();
+    }
+    ?>
+    </pre>
 </body>
 </html>
