@@ -20,9 +20,10 @@
     $lut[3] = new Lutador("Dead Code", "Australia", 37, 1.70, 90.9, 22, 3, 15);
     $lut[4] = new Lutador("Neardart", "Senegal", 23, 1.96, 102.9, 2, 3, 5);
 
-    foreach ($lut as $value) {
-        $value->apresentar();
-    }
+//    foreach ($lut as $value) {
+//        $value->apresentar();
+//    }
+
     ?>
     </pre>
 </body>

@@ -1,10 +1,10 @@
 <?php
-
+require_once 'Lutador.php'
 
 class Luta
 {
     private $desafiado;
-    private $desafiante;
+    private $desafiante = Lutador::class;
     private $rounds;
     private $aprovada;
 
@@ -15,7 +15,9 @@ class Luta
 
     public function lutar()
     {
-
+        if ($this->aprovada) {
+            $this->desafiado
+        }
     }
 
     /**
@@ -81,5 +83,5 @@ class Luta
     {
         $this->aprovada = $aprovada;
     }
-    
+
 }
