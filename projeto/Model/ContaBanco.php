@@ -1,4 +1,5 @@
 <?php
+
 class ContaBanco
 {
     public $numConta;
@@ -39,7 +40,7 @@ class ContaBanco
             echo "<p>conta nao possui dinheiro</p> ";
         } else {
             $this->setStatus(false);
-            echo "<p>conta de " .$this->getDono(). " , fechada com sucesso !</p> ";
+            echo "<p>conta de " . $this->getDono() . " , fechada com sucesso !</p> ";
         }
     }
 
