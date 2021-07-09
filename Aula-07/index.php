@@ -1,4 +1,3 @@
-<?php include_once 'Lutador.php' ?>
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -12,6 +11,8 @@
     <pre>
 
     <?php
+    require_once 'Lutador.php';
+    require_once 'Luta.php';
     $lut = array();
 
     $lut[0] = new Lutador("Pretty Boy", "França", 20, 1.46, 68.9, 2, 3, 5);
@@ -20,9 +21,12 @@
     $lut[3] = new Lutador("Dead Code", "Australia", 37, 1.70, 90.9, 22, 3, 15);
     $lut[4] = new Lutador("Neardart", "Senegal", 23, 1.96, 102.9, 2, 3, 5);
 
-//    foreach ($lut as $value) {
-//        $value->apresentar();
-//    }
+    //    foreach ($lut as $value) {
+    //        $value->apresentar();
+    //    }
+    $uec01 = new Luta();
+    $uec01->marcarLuta($lut[1], $lut[4]);
+    $uec01->lutar();
 
     ?>
     </pre>

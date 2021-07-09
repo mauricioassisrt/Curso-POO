@@ -4,13 +4,13 @@ require_once 'Lutador.php';
 class Luta
 {
     private $desafiado;
-    private $desafiante = Lutador;
+    private $desafiante ;
     private $rounds;
     private $aprovada;
 
     public function marcarLuta($l1, $l2)
     {
-        if ($l1->getCate && ($l1!=$l2)) {
+        if ($l1->getCategoria()=== $l2->getCategoria() && ($l1 != $l2)) {
             $this->aprovada = true;
             $this->desafiado = $l1;
             $this->desafiante = $l2;
@@ -24,7 +24,32 @@ class Luta
     public function lutar()
     {
         if ($this->aprovada) {
-            $this->desafiado
+            $this->desafiado->apresentar();
+            $this->desafiante->apresentar();
+            $vencedor = rand(0, 2);
+
+            switch ($vencedor) {
+                case   0:
+                    echo "<p>Empate!!</p>";
+                    $this->desafiado->empatarLuta();
+                    $this->desafiante->emaptarLuta();
+
+                    break;
+                case 1:
+
+                    echo "<p>" . $this->desafiado->getNome() . " Venceu </p>";
+                    $this->desafiado->ganharLuta();
+                    $this->desafiante->perderLuta();
+                    break;
+                case 2:
+
+                    echo "<p>" . $this->desafiante->getNome . " Perdeu a luta</p>";
+                    $this->desafiante->ganharLuta();
+                    $this->desafiado->perderLuta();
+                    break;
+            }
+        } else {
+            echo "<p> Luta não pode acontecer</p>";
         }
     }
 
