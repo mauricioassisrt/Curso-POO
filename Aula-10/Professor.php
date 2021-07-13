@@ -1,5 +1,6 @@
 <?php
 
+require_once 'Pessoa.php';
 
 class Professor extends Pessoa
 {
@@ -33,6 +34,7 @@ class Professor extends Pessoa
     {
         return $this->salario;
     }
+
 
     /**
      * @param mixed $salario

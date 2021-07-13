@@ -1,14 +1,15 @@
 <?php
 
+require_once 'Pessoa.php';
 
-class Funcionario extends Pessoa
+class   Funcionario extends Pessoa
 {
     private $setor, $trabalhando;
 
-    public function mudarTrabalho($novoTrabalho, $setor)
+    public function mudarTrabalho()
     {
-        $this->setTrabalhando($novoTrabalho);
-        $this->setSetor($setor);
+        $this->setTrabalhando(!$this->trabalhando);
+
     }
 
     /**

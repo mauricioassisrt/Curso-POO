@@ -8,7 +8,7 @@ class Aluno extends Pessoa
 
     public function cancelarMatricula()
     {
-
+        echo "<p> Sua matricula será cancelada !!</p>";
     }
 
     /**
