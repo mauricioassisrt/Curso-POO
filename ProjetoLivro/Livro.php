@@ -21,12 +21,16 @@ class Livro implements Publicacao
         $this->autor = $autor;
         $this->totalPaginas = $totalPaginas;
         $this->leitor = $leitor;
+        $this->aberto = false;
+        $this->pagAtual = 0;
     }
 
 
     public function detalhes()
     {
-
+        echo "<hr> Livro " . $this->titulo . " Escrito por " . $this->autor;
+        echo "<br> Páginas" . $this->totalPaginas . "Página atual " . $this->pagAtual;
+        echo "<br> Sendo lido por " . $this->leitor->getNome();
     }
 
     /**
@@ -139,7 +143,7 @@ class Livro implements Publicacao
 
     public function folhear($pagina)
     {
-        if ($pagin > $this->totalPaginas) {
+        if ($pagina > $this->totalPaginas) {
             $this->pagAtual = 0;
 
         } else {
