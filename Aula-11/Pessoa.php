@@ -3,11 +3,11 @@
 
 abstract class  Pessoa
 {
-    private $nome, $idade, $sexo;
+    protected $nome, $idade, $sexo;
 
     public final function fazerAniversario()
     {
-
+        $this->idade++;
     }
 
     /**
